@@ -106,9 +106,9 @@ if [ ! -d "$ITERM_PROFILE_PATH" ]; then
 fi
 
 # Install vscode extensions
-while read -r p; do
-  code --install-extension "$p" --force
-done <"$LOCAL_DEV_SETUP_MACOS/vscode.extensions"
+#while read -r p; do
+#  code --install-extension "$p" --force
+#done <"$LOCAL_DEV_SETUP_MACOS/vscode.extensions"
 
 
 # Default settings for vscode
