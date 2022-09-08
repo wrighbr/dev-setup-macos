@@ -40,7 +40,7 @@ then
   )
 else
   # We don't have it cloned, let's clone it !
-  git clone https://github.com/BESTSELLER/dev-setup-macos.git "$LOCAL_DEV_SETUP_MACOS"
+  git clone https://github.com/wrighbr/dev-setup-macos.git "$LOCAL_DEV_SETUP_MACOS"
 fi
 
 brew bundle --no-lock --file="$LOCAL_DEV_SETUP_MACOS/.Brewfile"
@@ -51,33 +51,33 @@ if [ ! -d ~/.oh-my-zsh ]; then
 fi
 
 # Disable mouse acceleration
-defaults write .GlobalPreferences com.apple.mouse.scaling -1
+#defaults write .GlobalPreferences com.apple.mouse.scaling -1
 
 ### Keyboard settings ###
 # Keyboard --> Key Repeat: Fast (all the way to the right)
-defaults write -g InitialKeyRepeat -int 15
+#defaults write -g InitialKeyRepeat -int 15
 
 # Keyboard --> Delay Until Repeat: Short (all the way to the right)
-defaults write -g KeyRepeat -int 2
+#defaults write -g KeyRepeat -int 2
 
 # Keyboard --> Text --> Untick "Correct spelling automatically"
-defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
+#defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
 
 # Keyboard --> Text --> Untick "Add full stop with double-space"
-defaults write -g NSAutomaticPeriodSubstitutionEnabled -bool false
+#defaults write -g NSAutomaticPeriodSubstitutionEnabled -bool false
 
 # Keyboard --> Text --> Untick "Use smart quotes and dashes"
-defaults write -g NSAutomaticQuoteSubstitutionEnabled -bool false
-defaults write -g NSAutomaticDashSubstitutionEnabled -bool false
+#defaults write -g NSAutomaticQuoteSubstitutionEnabled -bool false
+#defaults write -g NSAutomaticDashSubstitutionEnabled -bool false
 
 # Set keyboard shortcut "Move focus to next window" to Command+$
-/usr/libexec/PlistBuddy -c 'Delete :AppleSymbolicHotKeys:27' ~/Library/Preferences/com.apple.symbolichotkeys.plist
-/usr/libexec/PlistBuddy -c 'Add :AppleSymbolicHotKeys:27:enabled bool 1' ~/Library/Preferences/com.apple.symbolichotkeys.plist
-/usr/libexec/PlistBuddy -c 'Add :AppleSymbolicHotKeys:27:value:type string standard' ~/Library/Preferences/com.apple.symbolichotkeys.plist
-/usr/libexec/PlistBuddy -c 'Add :AppleSymbolicHotKeys:27:value:parameters array' ~/Library/Preferences/com.apple.symbolichotkeys.plist
-/usr/libexec/PlistBuddy -c 'Add :AppleSymbolicHotKeys:27:value:parameters:0 integer 36' ~/Library/Preferences/com.apple.symbolichotkeys.plist
-/usr/libexec/PlistBuddy -c 'Add :AppleSymbolicHotKeys:27:value:parameters:1 integer 10' ~/Library/Preferences/com.apple.symbolichotkeys.plist
-/usr/libexec/PlistBuddy -c 'Add :AppleSymbolicHotKeys:27:value:parameters:2 integer 1048576' ~/Library/Preferences/com.apple.symbolichotkeys.plist
+#/usr/libexec/PlistBuddy -c 'Delete :AppleSymbolicHotKeys:27' ~/Library/Preferences/com.apple.symbolichotkeys.plist
+#/usr/libexec/PlistBuddy -c 'Add :AppleSymbolicHotKeys:27:enabled bool 1' ~/Library/Preferences/com.apple.symbolichotkeys.plist
+#/usr/libexec/PlistBuddy -c 'Add :AppleSymbolicHotKeys:27:value:type string standard' ~/Library/Preferences/com.apple.symbolichotkeys.plist
+#/usr/libexec/PlistBuddy -c 'Add :AppleSymbolicHotKeys:27:value:parameters array' ~/Library/Preferences/com.apple.symbolichotkeys.plist
+#/usr/libexec/PlistBuddy -c 'Add :AppleSymbolicHotKeys:27:value:parameters:0 integer 36' ~/Library/Preferences/com.apple.symbolichotkeys.plist
+#/usr/libexec/PlistBuddy -c 'Add :AppleSymbolicHotKeys:27:value:parameters:1 integer 10' ~/Library/Preferences/com.apple.symbolichotkeys.plist
+#/usr/libexec/PlistBuddy -c 'Add :AppleSymbolicHotKeys:27:value:parameters:2 integer 1048576' ~/Library/Preferences/com.apple.symbolichotkeys.plist
 
 # font fix
 if [ -d "$HOME/fonts" ]
@@ -146,11 +146,11 @@ fi
 
 
 # Add our custom scripts
-cp "$LOCAL_DEV_SETUP_MACOS/scripts/config-clean.zsh" "$ZSH_CUSTOM/config-clean.zsh"
-cp "$LOCAL_DEV_SETUP_MACOS/scripts/aks-list.zsh" "$ZSH_CUSTOM/aks-list.zsh"
-cp "$LOCAL_DEV_SETUP_MACOS/scripts/aks-login.zsh" "$ZSH_CUSTOM/aks-login.zsh"
-cp "$LOCAL_DEV_SETUP_MACOS/scripts/gke-list.zsh" "$ZSH_CUSTOM/gke-list.zsh"
-cp "$LOCAL_DEV_SETUP_MACOS/scripts/gke-login.zsh" "$ZSH_CUSTOM/gke-login.zsh"
+#cp "$LOCAL_DEV_SETUP_MACOS/scripts/config-clean.zsh" "$ZSH_CUSTOM/config-clean.zsh"
+#cp "$LOCAL_DEV_SETUP_MACOS/scripts/aks-list.zsh" "$ZSH_CUSTOM/aks-list.zsh"
+#cp "$LOCAL_DEV_SETUP_MACOS/scripts/aks-login.zsh" "$ZSH_CUSTOM/aks-login.zsh"
+#cp "$LOCAL_DEV_SETUP_MACOS/scripts/gke-list.zsh" "$ZSH_CUSTOM/gke-list.zsh"
+#cp "$LOCAL_DEV_SETUP_MACOS/scripts/gke-login.zsh" "$ZSH_CUSTOM/gke-login.zsh"
 
 mkdir -p "$ZSH_PATH/completions"
 cp "$LOCAL_DEV_SETUP_MACOS/scripts/_rerun" "$ZSH_PATH/completions/_rerun"
