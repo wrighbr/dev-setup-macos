@@ -3,7 +3,7 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-export GOPATH="$HOME/go"
+#export GOPATH="$HOME/go"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -82,17 +82,17 @@ iterm2_print_user_vars() {
   iterm2_set_user_var kube $(cut -d/ -f1 <<<"$ZSH_KUBECTL_PROMPT")
 }
 
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+#source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+#source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 
 alias kc=kubectx
 alias tf=terraform
-export PATH=$HOME/go/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+#export PATH=$HOME/go/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
-export VAULT_ADDR=https://vault.bestsellerit.com
-export LC_ALL=en_US.UTF-8
+#export VAULT_ADDR=https://vault.bestsellerit.com
+#export LC_ALL=en_US.UTF-8
 
-export CLOUDSDK_PYTHON="$(brew --prefix)/opt/python@3.8/libexec/bin/python"
-source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
-source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+#export CLOUDSDK_PYTHON="$(brew --prefix)/opt/python@3.8/libexec/bin/python"
+#source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+#source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
