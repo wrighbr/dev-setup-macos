@@ -52,7 +52,7 @@ brew 'circleci'
 #brew 'fluxcd/tap/flux'
 
 # Casks
-cask 'iterm2'
+#cask 'iterm2'
 cask 'visual-studio-code'
 cask 'docker'
 cask 'google-cloud-sdk'
